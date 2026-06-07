@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-editorial-bg text-editorial-text font-sans antialiased;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom styling for scrollbar to fit editorial look */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FFFFFF;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 0px;
+  }
+}
+
+/* Accessibility focus ring styling */
+*:focus-visible {
+  @apply outline outline-2 outline-editorial-accent outline-offset-4;
+}
